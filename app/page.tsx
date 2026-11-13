@@ -1,9 +1,32 @@
-import Image from "next/image";
-
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import HeroSection from "@/components/home/HeroSection";
+import EditorialMosaic from "@/components/home/EditorialMosaic";
+import FeaturedResearch from "@/components/home/FeaturedResearch";
+import SpotlightSection from "@/components/home/SpotlightSection";
+import BlogsSection from "@/components/home/BlogsSection";
+import StatisticsSection from "@/components/home/StatisticsSection";
+import { Container } from "@/components/common/Ui";
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-     <h1>Hello</h1>
-    </div>
+    <>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <Header />
+      <main id="main">
+        <HeroSection />
+        <Container className="editorial-body">
+          <EditorialMosaic />
+          <div className="research-layout">
+            <FeaturedResearch />
+            <SpotlightSection />
+            <BlogsSection />
+          </div>
+        </Container>
+        <StatisticsSection />
+      </main>
+      <Footer />
+    </>
   );
 }
