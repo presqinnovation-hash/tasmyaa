@@ -1,0 +1,297 @@
+.tasmyaa-header-header {
+  background: #fff;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  z-index: 20;
+}
+.tasmyaa-header-header * {
+  box-sizing: border-box;
+}
+.tasmyaa-header-masthead {
+  height: clamp(80px, 5.53vw, 105px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+}
+.tasmyaa-header-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #8b8e90;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.tasmyaa-header-logo svg {
+  width: clamp(28px, 2.1vw, 40px);
+  height: 48px;
+}
+.tasmyaa-header-logo > span {
+  font-family: Georgia, serif;
+  font-size: clamp(36px, 2.8vw, 53px);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+.tasmyaa-header-logo small {
+  font-family: Arial, sans-serif;
+  display: block;
+  font-size: clamp(6px, 0.45vw, 9px);
+  letter-spacing: 2px;
+  margin-top: 8px;
+}
+.tasmyaa-header-organization {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  white-space: nowrap;
+}
+.tasmyaa-header-organization p {
+  font-size: clamp(17px, 1.26vw, 24px);
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+}
+.tasmyaa-header-organization > span {
+  font-size: clamp(12px, 0.95vw, 18px);
+  font-weight: 300;
+  line-height: 1.6;
+  color: #444;
+}
+.tasmyaa-header-navbar {
+  background: #030503;
+  color: white;
+}
+.tasmyaa-header-navInner {
+  width: 77.4%;
+  max-width: 1470px;
+  min-height: clamp(46px, 3.16vw, 60px);
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: clamp(30px, 3.7vw, 70px);
+}
+.tasmyaa-header-desktopNav {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 1.05vw, 20px);
+  font-size: clamp(11px, 0.74vw, 14px);
+  white-space: nowrap;
+}
+.tasmyaa-header-header button {
+  font: inherit;
+  cursor: default;
+  background: none;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.tasmyaa-header-desktopNav > button {
+  transition: color 0.2s;
+}
+.tasmyaa-header-desktopNav > button:hover {
+  color: #ccc;
+}
+.tasmyaa-header-header .tasmyaa-header-donate {
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 10px 12px;
+}
+.tasmyaa-header-header .tasmyaa-header-search {
+  color: #7d8588;
+  padding: 6px;
+  flex-shrink: 0;
+}
+.tasmyaa-header-search svg {
+  width: 20px;
+  height: 20px;
+}
+.tasmyaa-header-research {
+  position: relative;
+}
+.tasmyaa-header-research summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  padding: 15px 0;
+}
+.tasmyaa-header-research summary::-webkit-details-marker,
+.tasmyaa-header-mobileNav summary::-webkit-details-marker {
+  display: none;
+}
+.tasmyaa-header-dropdown {
+  position: absolute;
+  top: 100%;
+  left: -16px;
+  min-width: 220px;
+  background: #080a08;
+  box-shadow: 0 8px 20px #0003;
+  padding: 10px 16px;
+  border-top: 2px solid #159dca;
+}
+.tasmyaa-header-dropdown button {
+  display: block;
+  padding: 12px 0 !important;
+  text-align: left;
+  width: 100%;
+  font-size: 12px !important;
+}
+.tasmyaa-header-mobileNav {
+  display: none;
+}
+.tasmyaa-header-header :is(a, button, summary):focus-visible {
+  outline: 2px solid #159dca;
+  outline-offset: 5px;
+}
+@media (max-width: 1200px) {
+  .tasmyaa-header-navInner {
+    width: calc(100% - 48px);
+    gap: 24px;
+  }
+  .tasmyaa-header-desktopNav {
+    gap: 13px;
+    font-size: 11px;
+  }
+  .tasmyaa-header-organization p {
+    font-size: 16px;
+  }
+  .tasmyaa-header-organization > span {
+    font-size: 11px;
+  }
+  .tasmyaa-header-logo > span {
+    font-size: 33px;
+  }
+  .tasmyaa-header-logo small {
+    font-size: 5px;
+    letter-spacing: 1.5px;
+  }
+  .tasmyaa-header-logo svg {
+    width: 25px;
+  }
+}
+@media (max-width: 900px) {
+  .tasmyaa-header-masthead {
+    height: 80px;
+    padding-inline: 20px;
+  }
+  .tasmyaa-header-organization {
+    left: auto;
+    right: 24px;
+    transform: none;
+    max-width: 64%;
+    white-space: normal;
+    text-align: right;
+  }
+  .tasmyaa-header-organization p {
+    font-size: 14px;
+  }
+  .tasmyaa-header-organization > span {
+    font-size: 10px;
+    display: block;
+    margin-top: 4px;
+  }
+  .tasmyaa-header-desktopNav {
+    display: none;
+  }
+  .tasmyaa-header-navInner {
+    width: calc(100% - 48px);
+    justify-content: space-between;
+    min-height: 44px;
+  }
+  .tasmyaa-header-mobileNav {
+    display: block;
+    font-size: 13px;
+  }
+  .tasmyaa-header-mobileNav > summary {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    align-items: center;
+    padding: 13px 0;
+  }
+  .tasmyaa-header-mobileNav > summary > span {
+    font-size: 18px;
+    line-height: 1;
+  }
+  .tasmyaa-header-mobileNav > nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: #050705;
+    padding: 12px 24px 24px;
+    max-height: 70vh;
+    overflow: auto;
+    box-shadow: 0 8px 20px #0004;
+  }
+  .tasmyaa-header-mobileNav nav > button,
+  .tasmyaa-header-mobileNav nav > .tasmyaa-header-research {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #303330;
+    padding: 13px 0;
+  }
+  .tasmyaa-header-mobileNav nav > .tasmyaa-header-research {
+    padding: 0;
+  }
+  .tasmyaa-header-mobileNav .tasmyaa-header-research summary {
+    justify-content: space-between;
+  }
+  .tasmyaa-header-mobileNav .tasmyaa-header-dropdown {
+    position: static;
+    box-shadow: none;
+    border-top: 0;
+    padding: 0 16px 8px;
+    min-width: 0;
+  }
+  .tasmyaa-header-mobileNav .tasmyaa-header-donate {
+    width: max-content;
+    margin-top: 16px;
+    padding: 10px 14px;
+  }
+  .tasmyaa-header-search svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .tasmyaa-header-masthead {
+    height: 90px;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+  .tasmyaa-header-logo > span {
+    font-size: 29px;
+    letter-spacing: -1px;
+  }
+  .tasmyaa-header-logo svg {
+    width: 22px;
+    height: 36px;
+  }
+  .tasmyaa-header-logo small {
+    font-size: 5px;
+    letter-spacing: 1px;
+  }
+  .tasmyaa-header-organization {
+    max-width: 49%;
+    right: 16px;
+  }
+  .tasmyaa-header-organization p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  .tasmyaa-header-organization > span {
+    font-size: 8px;
+    line-height: 1.4;
+  }
+  .tasmyaa-header-navInner {
+    width: calc(100% - 32px);
+    min-height: 42px;
+  }
+}
