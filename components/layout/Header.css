@@ -5,6 +5,14 @@
   position: relative;
   z-index: 20;
 }
+.tasmyaa-header-header .lucide {
+  display: block;
+  flex-shrink: 0;
+  stroke-width: 2;
+}
+.tasmyaa-header-brandIcon {
+  color: #849987;
+}
 .tasmyaa-header-header * {
   box-sizing: border-box;
 }
@@ -214,9 +222,9 @@
     align-items: center;
     padding: 13px 0;
   }
-  .tasmyaa-header-mobileNav > summary > span {
-    font-size: 18px;
-    line-height: 1;
+  .tasmyaa-header-menuIcon {
+    width: 20px;
+    height: 20px;
   }
   .tasmyaa-header-mobileNav > nav {
     position: absolute;

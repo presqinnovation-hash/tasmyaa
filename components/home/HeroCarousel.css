@@ -8,6 +8,11 @@
   isolation: isolate;
   font-family: var(--font-geist-sans), Arial, sans-serif;
 }
+.tasmyaa-hero-carousel .lucide {
+  display: block;
+  flex-shrink: 0;
+  stroke-width: 2;
+}
 .tasmyaa-hero-slide {
   position: absolute;
   inset: 0;
@@ -63,11 +68,8 @@
   color: #202719;
 }
 .tasmyaa-hero-arrow svg {
-  width: 18px;
-  height: 27px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
+  width: 24px;
+  height: 24px;
 }
 .tasmyaa-hero-previous {
   left: 9px;

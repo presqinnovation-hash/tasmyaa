@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { useEffect, useState } from "react";
 import { HERO_ROTATION_MS, heroSlides } from "@/data/heroSlides";
 import "./HeroCarousel.css";
@@ -80,9 +81,7 @@ export default function HeroCarousel() {
         onClick={() => move(-1)}
         aria-label="Previous slide"
       >
-        <svg viewBox="0 0 20 30" aria-hidden="true">
-          <path d="m14 5-9 10 9 10" />
-        </svg>
+        <ChevronLeft size={24} aria-hidden="true" />
       </button>
       <button
         className={`tasmyaa-hero-arrow tasmyaa-hero-next`}
@@ -90,9 +89,7 @@ export default function HeroCarousel() {
         onClick={() => move(1)}
         aria-label="Next slide"
       >
-        <svg viewBox="0 0 20 30" aria-hidden="true">
-          <path d="m6 5 9 10-9 10" />
-        </svg>
+        <ChevronRight size={24} aria-hidden="true" />
       </button>
       <div className="tasmyaa-hero-controls">
         <span
@@ -111,22 +108,11 @@ export default function HeroCarousel() {
           }
           aria-pressed={userPaused}
         >
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
-            aria-hidden="true"
-            fill="currentColor"
-          >
-            {userPaused ? (
-              <path d="M3 1 11 6 3 11Z" />
-            ) : (
-              <>
-                <rect x="2" y="1" width="3" height="10" />
-                <rect x="7" y="1" width="3" height="10" />
-              </>
-            )}
-          </svg>
+          {userPaused ? (
+            <Play size={14} aria-hidden="true" />
+          ) : (
+            <Pause size={14} aria-hidden="true" />
+          )}
         </button>
       </div>
     </section>

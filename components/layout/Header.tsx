@@ -1,3 +1,4 @@
+import { ChevronDown, Menu, Search, Sprout } from "lucide-react";
 import "./Header.css";
 
 const navigation = [
@@ -17,27 +18,12 @@ const themes = [
   "Sustainable cities",
 ];
 
-function SearchIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      aria-hidden="true"
-    >
-      <circle cx="10" cy="10" r="6" />
-      <path d="m15 15 5 5" />
-    </svg>
-  );
-}
-
 function NavigationItems() {
   return (
     <>
       <details className="tasmyaa-header-research">
         <summary>
-          Research <span aria-hidden="true">⌄</span>
+          Research <ChevronDown size={14} aria-hidden="true" />
         </summary>
         <div className="tasmyaa-header-dropdown">
           {themes.map((theme) => (
@@ -72,15 +58,7 @@ export default function Header() {
           href="#top"
           aria-label="Tasmyaa home"
         >
-          <svg viewBox="0 0 36 44" aria-hidden="true">
-            <path
-              d="M18 40V19M18 26C4 27 2 15 3 8c13-1 18 7 15 18Z"
-              fill="none"
-              stroke="#849987"
-              strokeWidth="2.5"
-            />
-            <path d="M18 19C18 7 27 2 34 3c2 10-4 18-16 16Z" fill="#159dca" />
-          </svg>
+          <Sprout className="tasmyaa-header-brandIcon" aria-hidden="true" />
           <span>
             tasmyaa<small>IDEAS · EVIDENCE · IMPACT</small>
           </span>
@@ -100,7 +78,12 @@ export default function Header() {
           </nav>
           <details className="tasmyaa-header-mobileNav">
             <summary>
-              <span aria-hidden="true">☰</span> Menu
+              <Menu
+                className="tasmyaa-header-menuIcon"
+                size={20}
+                aria-hidden="true"
+              />{" "}
+              Menu
             </summary>
             <nav aria-label="Mobile navigation">
               <NavigationItems />
@@ -112,7 +95,7 @@ export default function Header() {
             className="tasmyaa-header-search"
             aria-label="Search"
           >
-            <SearchIcon />
+            <Search size={20} aria-hidden="true" />
           </button>
         </div>
       </div>
