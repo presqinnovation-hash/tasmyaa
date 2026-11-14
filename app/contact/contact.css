@@ -1,0 +1,245 @@
+.tasmyaa-contact-page {
+  background: #fff;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 34px 0 12px;
+}
+.tasmyaa-contact-container {
+  width: 77.4%;
+  max-width: 1470px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 33fr) minmax(0, 67fr);
+  gap: 28px;
+  align-items: start;
+}
+.tasmyaa-contact-information {
+  position: relative;
+  border-right: 1px solid #bcbcbc;
+  padding-right: 27px;
+  min-width: 0;
+}
+.tasmyaa-contact-information::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 0;
+  width: 2px;
+  height: 40%;
+  background: #00a4d7;
+}
+.tasmyaa-contact-page h2 {
+  font-size: 20px;
+  color: #009bd1;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0 0 14px;
+}
+.tasmyaa-contact-information > section + section {
+  margin-top: 27px;
+}
+.tasmyaa-contact-information address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.tasmyaa-contact-information address strong {
+  display: block;
+  line-height: 1.5;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  max-width: 330px;
+}
+.tasmyaa-contact-information address span {
+  display: block;
+}
+.tasmyaa-contact-pending {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.tasmyaa-contact-pending svg {
+  color: #009bd1;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.tasmyaa-contact-pending p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+  color: #4f4f4f;
+}
+.tasmyaa-contact-enquiry {
+  border-bottom: 1px solid #e2e2e2;
+}
+.tasmyaa-contact-enquiry > summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  font-size: 13px;
+  line-height: 1.4;
+  cursor: pointer;
+  color: #333;
+}
+.tasmyaa-contact-enquiry > summary::-webkit-details-marker {
+  display: none;
+}
+.tasmyaa-contact-enquiry summary svg {
+  flex-shrink: 0;
+  color: #009bd1;
+  transition: transform 0.2s;
+}
+.tasmyaa-contact-enquiry[open] summary svg {
+  transform: rotate(180deg);
+}
+.tasmyaa-contact-enquiry > p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0 0 14px;
+}
+.tasmyaa-contact-enquiry summary:focus-visible {
+  outline: 2px solid #009bd1;
+  outline-offset: 3px;
+}
+.tasmyaa-contact-location {
+  min-width: 0;
+}
+.tasmyaa-contact-map-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #555;
+  background: #f5f7f8;
+  padding: 11px 13px;
+  margin: 0 0 16px;
+}
+.tasmyaa-contact-map-note svg {
+  color: #009bd1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.tasmyaa-contact-map {
+  background: #f1f2f2;
+  width: 100%;
+  height: 410px;
+}
+.tasmyaa-contact-map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+.tasmyaa-contact-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.tasmyaa-contact-skip {
+  position: fixed;
+  z-index: 100;
+  top: 8px;
+  left: 8px;
+  background: #fff;
+  color: #111;
+  padding: 12px;
+  transform: translateY(-170%);
+}
+.tasmyaa-contact-skip:focus {
+  transform: none;
+  outline: 2px solid #009bd1;
+}
+@media (max-width: 900px) {
+  .tasmyaa-contact-container {
+    width: calc(100% - 48px);
+    grid-template-columns: minmax(0, 40fr) minmax(0, 60fr);
+    gap: 22px;
+  }
+  .tasmyaa-contact-information {
+    padding-right: 20px;
+  }
+  .tasmyaa-contact-information address {
+    font-size: 13px;
+  }
+  .tasmyaa-contact-information address strong {
+    font-size: 12px;
+  }
+  .tasmyaa-contact-page h2 {
+    font-size: 19px;
+  }
+  .tasmyaa-contact-map-note {
+    font-size: 11px;
+    padding: 10px;
+    gap: 7px;
+  }
+  .tasmyaa-contact-pending p {
+    font-size: 12px;
+  }
+  .tasmyaa-contact-page {
+    padding-top: 28px;
+  }
+}
+@media (max-width: 600px) {
+  .tasmyaa-contact-page {
+    padding: 26px 0 0;
+  }
+  .tasmyaa-contact-container {
+    width: calc(100% - 32px);
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+  .tasmyaa-contact-information {
+    border-right: 0;
+    padding-right: 0;
+  }
+  .tasmyaa-contact-information::after {
+    display: none;
+  }
+  .tasmyaa-contact-information address {
+    font-size: 14px;
+  }
+  .tasmyaa-contact-information address strong {
+    font-size: 13px;
+    max-width: 300px;
+  }
+  .tasmyaa-contact-page h2 {
+    font-size: 20px;
+  }
+  .tasmyaa-contact-information > section + section {
+    margin-top: 26px;
+  }
+  .tasmyaa-contact-pending p {
+    font-size: 13px;
+  }
+  .tasmyaa-contact-enquiry > summary {
+    font-size: 14px;
+    padding: 13px 0;
+  }
+  .tasmyaa-contact-enquiry > p {
+    font-size: 13px;
+  }
+  .tasmyaa-contact-map-note {
+    font-size: 12px;
+    padding: 12px;
+  }
+  .tasmyaa-contact-map {
+    height: 320px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tasmyaa-contact-enquiry summary svg {
+    transition: none;
+  }
+}

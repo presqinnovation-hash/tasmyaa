@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { FooterLinkGroup } from "@/data/footer";
 
 export default function FooterNavigation({
@@ -9,9 +10,12 @@ export default function FooterNavigation({
     <nav className="tasmyaa-footer-navigation" aria-label={group.label}>
       {group.links.map((link) =>
         link.href ? (
-          <a key={link.label} href={link.href}>
+          <Link
+            key={link.label}
+            href={link.href.startsWith("#") ? `/${link.href}` : link.href}
+          >
             {link.label}
-          </a>
+          </Link>
         ) : (
           <span
             key={link.label}
