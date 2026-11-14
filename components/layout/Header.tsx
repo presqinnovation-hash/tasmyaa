@@ -1,87 +1,13 @@
-import { Menu, Search, Sprout } from "lucide-react";
-import ResearchMegaMenu from "./ResearchMegaMenu";
+import { ArrowUpRight, BookOpen, MapPin, Menu, X } from "lucide-react";
+import { company, primaryNavigation } from "@/data/company";
 import "./Header.css";
 
-const navigation = [
-  "Publications",
-  "Our Story",
-  "Meet our Team",
-  "Join our Events",
-  "Blogs",
-  "Press Releases",
-  "Work with Us",
-  "Contact",
-];
-function NavigationItems() {
-  return (
-    <>
-      <ResearchMegaMenu />
-      {navigation.map((label) => (
-        <button type="button" aria-disabled="true" key={label}>
-          {label}
-        </button>
-      ))}
-      <button
-        type="button"
-        aria-disabled="true"
-        className="tasmyaa-header-donate"
-      >
-        Donate
-      </button>
-    </>
-  );
-}
-
 export default function Header() {
-  return (
-    <header id="top" className="tasmyaa-header-header">
-      <div className="tasmyaa-header-masthead">
-        <a
-          className="tasmyaa-header-logo"
-          href="#top"
-          aria-label="Tasmyaa home"
-        >
-          <Sprout className="tasmyaa-header-brandIcon" aria-hidden="true" />
-          <span>
-            tasmyaa<small>IDEAS · EVIDENCE · IMPACT</small>
-          </span>
-        </a>
-        <div className="tasmyaa-header-organization">
-          <p>TASMYAA — RESEARCH FOR PEOPLE AND THE PLANET</p>
-          <span>INTEGRATED | COLLABORATIVE | INDEPENDENT</span>
-        </div>
-      </div>
-      <div className="tasmyaa-header-navbar">
-        <div className="tasmyaa-header-navInner">
-          <nav
-            className="tasmyaa-header-desktopNav"
-            aria-label="Primary navigation"
-          >
-            <NavigationItems />
-          </nav>
-          <details className="tasmyaa-header-mobileNav">
-            <summary>
-              <Menu
-                className="tasmyaa-header-menuIcon"
-                size={20}
-                aria-hidden="true"
-              />{" "}
-              Menu
-            </summary>
-            <nav aria-label="Mobile navigation">
-              <NavigationItems />
-            </nav>
-          </details>
-          <button
-            type="button"
-            aria-disabled="true"
-            className="tasmyaa-header-search"
-            aria-label="Search"
-          >
-            <Search size={20} aria-hidden="true" />
-          </button>
-        </div>
-      </div>
-    </header>
-  );
+  return <header className="site-header">
+    <div className="site-header-legal"><div className="container"><span>{company.legalName}</span><span><MapPin size={12} aria-hidden="true"/>Ranchi, Jharkhand</span></div></div>
+    <div className="container site-header-main"><a className="site-brand" href="#top" aria-label="TASMYAA home"><span className="site-brand-mark"><BookOpen size={25} aria-hidden="true"/></span><span>{company.brand}<small>LEARNING & OPPORTUNITIES</small></span></a>
+      <nav className="site-desktop-nav" aria-label="Primary navigation">{primaryNavigation.map(link => <a href={link.href} key={link.label}>{link.label}</a>)}<a className="button button-small" href="#contact">Enquire Now<ArrowUpRight size={15} aria-hidden="true"/></a></nav>
+      <details className="site-mobile-nav"><summary aria-label="Toggle navigation"><Menu className="menu-open-icon" size={24} aria-hidden="true"/><X className="menu-close-icon" size={24} aria-hidden="true"/></summary><nav aria-label="Mobile navigation">{primaryNavigation.map(link => <a key={link.label} href={link.href}>{link.label}</a>)}<a className="button button-small" href="#contact">Enquire Now<ArrowUpRight size={15} aria-hidden="true"/></a></nav></details>
+    </div>
+  </header>;
 }

@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { useEffect, useState } from "react";
-import { HERO_ROTATION_MS, heroSlides } from "@/data/heroSlides";
+import { HERO_ROTATION_MS, heroCopy, heroSlides } from "@/data/heroSlides";
 import "./HeroCarousel.css";
 
 export default function HeroCarousel() {
@@ -30,7 +30,7 @@ export default function HeroCarousel() {
   return (
     <section
       className="tasmyaa-hero-carousel"
-      aria-label="Tasmyaa highlights"
+      aria-label="TASMYAA learning highlights"
       aria-roledescription="carousel"
       data-active-slide={activeIndex + 1}
       onMouseEnter={() => setHovered(true)}
@@ -51,30 +51,15 @@ export default function HeroCarousel() {
         }
       }}
     >
+      <div className="hero-learning-content"><p className="eyebrow"><span />{heroCopy.eyebrow}</p><h1>{heroCopy.heading}</h1><p className="hero-learning-description">{heroCopy.description}</p><div className="hero-learning-actions"><a className="button" href="#programmes">Explore Programmes<ArrowUpRight size={17} aria-hidden="true"/></a><a className="button button-outline" href="#contact">Contact Us<ArrowUpRight size={17} aria-hidden="true"/></a></div><p className="hero-learning-note">A new perspective on learning and opportunity.</p></div>
+      <div className="hero-learning-images">
       {heroSlides.map((slide, index) => (
-        <div
-          key={slide.id}
-          className={`tasmyaa-hero-slide ${index === activeIndex ? "tasmyaa-hero-active" : ""}`}
-          role="group"
-          aria-roledescription="slide"
-          aria-label={`${index + 1} of ${heroSlides.length}`}
-          aria-hidden={index !== activeIndex}
-        >
-          <Image
-            src={slide.image}
-            alt={slide.alt}
-            fill
-            sizes="100vw"
-            priority={index === 0}
-            loading={index === 0 ? undefined : "eager"}
-            className="tasmyaa-hero-image"
-            style={{ objectPosition: slide.position }}
-          />
-          <div className="tasmyaa-hero-caption">
-            <h2>{slide.headline}</h2>
-          </div>
+        <div key={slide.id} className={`tasmyaa-hero-slide ${index === activeIndex ? "tasmyaa-hero-active" : ""}`} role="group" aria-roledescription="slide" aria-label={`${index + 1} of ${heroSlides.length}`} aria-hidden={index !== activeIndex}>
+          <Image src={slide.image} alt={slide.alt} fill sizes="(max-width: 700px) 100vw, 56vw" priority={index === 0} loading={index === 0 ? undefined : "eager"} className="tasmyaa-hero-image" style={{ objectPosition: slide.position }} />
+          <div className="tasmyaa-hero-caption"><p>{slide.headline}</p></div>
         </div>
       ))}
+      </div>
       <button
         className={`tasmyaa-hero-arrow tasmyaa-hero-previous`}
         type="button"
