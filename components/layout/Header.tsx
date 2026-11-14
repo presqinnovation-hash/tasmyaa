@@ -1,4 +1,5 @@
-import { ChevronDown, Menu, Search, Sprout } from "lucide-react";
+import { Menu, Search, Sprout } from "lucide-react";
+import ResearchMegaMenu from "./ResearchMegaMenu";
 import "./Header.css";
 
 const navigation = [
@@ -11,28 +12,10 @@ const navigation = [
   "Work with Us",
   "Contact",
 ];
-const themes = [
-  "Clean energy",
-  "Climate resilience",
-  "Water & ecosystems",
-  "Sustainable cities",
-];
-
 function NavigationItems() {
   return (
     <>
-      <details className="tasmyaa-header-research">
-        <summary>
-          Research <ChevronDown size={14} aria-hidden="true" />
-        </summary>
-        <div className="tasmyaa-header-dropdown">
-          {themes.map((theme) => (
-            <button type="button" aria-disabled="true" key={theme}>
-              {theme}
-            </button>
-          ))}
-        </div>
-      </details>
+      <ResearchMegaMenu />
       {navigation.map((label) => (
         <button type="button" aria-disabled="true" key={label}>
           {label}
