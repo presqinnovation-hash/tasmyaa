@@ -18,9 +18,12 @@ function NavigationItems() {
     <>
       <ResearchMegaMenu />
       {navigation.map((label) =>
-        label === "Contact" ? (
-          <Link href="/contact" key={label}>
-            Contact
+        label === "Contact" || label === "Press Releases" ? (
+          <Link
+            href={label === "Contact" ? "/contact" : "/press-releases"}
+            key={label}
+          >
+            {label}
           </Link>
         ) : (
           <button type="button" aria-disabled="true" key={label}>

@@ -1,0 +1,478 @@
+.tasmyaa-press-page {
+  --press-blue: #21b4e7;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #111;
+  padding-top: 34px;
+}
+.tasmyaa-press-focus {
+  display: grid;
+  grid-template-columns: minmax(0, 69fr) minmax(0, 31fr);
+  width: 100%;
+  border-bottom: 1px solid #d1d1d1;
+}
+.tasmyaa-press-feature {
+  background: #000;
+  color: #fff;
+  min-width: 0;
+  min-height: 430px;
+  padding: 34px 38px 38px max(24px, calc((100vw - min(77.4vw, 1470px)) / 2));
+}
+.tasmyaa-press-page h2 {
+  font-size: clamp(19px, 1.26vw, 24px);
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0 0 30px;
+}
+.tasmyaa-press-feature-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.43fr) minmax(0, 1fr);
+  gap: 25px;
+}
+.tasmyaa-press-featured-image {
+  min-width: 0;
+  margin: 0;
+}
+.tasmyaa-press-featured-image > div {
+  aspect-ratio: 1.67;
+  position: relative;
+  background: #1d1d1d;
+}
+.tasmyaa-press-featured-image img {
+  object-fit: cover;
+  object-position: 60% center;
+}
+.tasmyaa-press-featured-image figcaption {
+  font-size: 10px;
+  line-height: 1.5;
+  color: #b4b4b4;
+  margin-top: 11px;
+}
+.tasmyaa-press-announcements {
+  min-width: 0;
+}
+.tasmyaa-press-announcements h3 {
+  font-size: clamp(16px, 1.05vw, 20px);
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0 0 24px;
+}
+.tasmyaa-press-announcement-empty {
+  padding-top: 9px;
+}
+.tasmyaa-press-announcement-empty > svg {
+  color: #797979;
+  margin-bottom: 20px;
+}
+.tasmyaa-press-announcement-empty > p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--press-blue);
+  max-width: 350px;
+  margin: 0;
+}
+.tasmyaa-press-announcements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.tasmyaa-press-announcements li > a {
+  color: var(--press-blue);
+  font-size: 15px;
+  line-height: 1.4;
+}
+.tasmyaa-press-announcements li > p {
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.5;
+  margin: 8px 0;
+}
+.tasmyaa-press-announcement-meta {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #bbb;
+  font-size: 11px;
+}
+.tasmyaa-press-contact {
+  min-width: 0;
+  background: #fff;
+  padding: 36px max(24px, calc((100vw - min(77.4vw, 1470px)) / 2)) 35px 40px;
+}
+.tasmyaa-press-contact h2 {
+  color: #009bd1;
+  font-size: clamp(18px, 1.1vw, 21px);
+  text-align: center;
+  line-height: 1.35;
+  margin-bottom: 30px;
+  white-space: normal;
+}
+.tasmyaa-press-contact-empty {
+  text-align: center;
+}
+.tasmyaa-press-contact-icon {
+  display: grid;
+  place-items: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #f2f4f5;
+  color: #7e8c93;
+  margin: 0 auto 18px;
+}
+.tasmyaa-press-contact-empty h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+.tasmyaa-press-contact-empty p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #535353;
+  margin: 0;
+}
+.tasmyaa-press-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #008aba;
+  font-size: 13px;
+  margin-top: 23px;
+}
+.tasmyaa-press-contact-link:hover {
+  text-decoration: underline;
+}
+.tasmyaa-press-person {
+  text-align: center;
+  padding: 15px 0 20px;
+}
+.tasmyaa-press-person + .tasmyaa-press-person {
+  border-top: 1px solid #ddd;
+}
+.tasmyaa-press-person > img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 12px;
+}
+.tasmyaa-press-person h3 {
+  font-size: 15px;
+  margin: 0;
+}
+.tasmyaa-press-person p,
+.tasmyaa-press-person a {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 5px 0 0;
+  overflow-wrap: anywhere;
+}
+.tasmyaa-press-resources {
+  background: #404040;
+  color: #fff;
+  margin-top: 32px;
+  padding: 34px 0 48px;
+}
+.tasmyaa-press-container {
+  width: 77.4%;
+  max-width: 1470px;
+  margin: 0 auto;
+}
+.tasmyaa-press-resources h2 {
+  margin-bottom: 24px;
+}
+.tasmyaa-press-resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 70px;
+}
+.tasmyaa-press-resource {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.tasmyaa-press-resource-image {
+  width: 100%;
+  aspect-ratio: 1.52;
+  position: relative;
+  background: #f8f7f5;
+}
+.tasmyaa-press-resource-image img {
+  object-fit: cover;
+}
+.tasmyaa-press-resource h3 {
+  font-size: clamp(17px, 1vw, 20px);
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 20px 0 0;
+}
+.tasmyaa-press-resource > p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 15px 0 0;
+  min-height: 43px;
+  max-width: 400px;
+}
+.tasmyaa-press-coming-soon {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: #dedede;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+.tasmyaa-press-resource-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 19px;
+}
+.tasmyaa-press-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--press-blue);
+  padding: 11px 19px;
+  font-size: 12px;
+  line-height: 1.4;
+  background: transparent;
+  color: var(--press-blue);
+  text-decoration: none;
+  border-radius: 0;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.tasmyaa-press-action:not(:disabled):hover {
+  background: var(--press-blue);
+  color: #10232c;
+}
+.tasmyaa-press-action:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.tasmyaa-press-page :is(a, button):focus-visible {
+  outline: 2px solid var(--press-blue);
+  outline-offset: 4px;
+}
+.tasmyaa-press-skip {
+  position: fixed;
+  z-index: 100;
+  top: 8px;
+  left: 8px;
+  padding: 12px;
+  background: #fff;
+  color: #111;
+  transform: translateY(-180%);
+}
+.tasmyaa-press-skip:focus {
+  transform: none;
+  outline: 2px solid #009bd1;
+}
+.tasmyaa-press-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (min-width: 1700px) {
+  .tasmyaa-press-feature {
+    min-height: 550px;
+    padding-top: 42px;
+    padding-right: 50px;
+    padding-bottom: 42px;
+  }
+  .tasmyaa-press-contact {
+    padding-top: 44px;
+    padding-left: 50px;
+  }
+  .tasmyaa-press-feature-grid {
+    gap: 30px;
+  }
+  .tasmyaa-press-resources {
+    padding: 42px 0 65px;
+  }
+  .tasmyaa-press-resources-grid {
+    gap: 100px;
+  }
+  .tasmyaa-press-announcement-empty > p {
+    font-size: 16px;
+  }
+  .tasmyaa-press-contact-empty p {
+    font-size: 15px;
+  }
+  .tasmyaa-press-resource > p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1000px) {
+  .tasmyaa-press-focus {
+    grid-template-columns: minmax(0, 68fr) minmax(0, 32fr);
+  }
+  .tasmyaa-press-feature {
+    padding: 28px 24px 32px;
+    min-height: 0;
+  }
+  .tasmyaa-press-feature-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .tasmyaa-press-featured-image > div {
+    aspect-ratio: 1.8;
+  }
+  .tasmyaa-press-announcements h3 {
+    margin-bottom: 15px;
+  }
+  .tasmyaa-press-announcement-empty {
+    padding-top: 0;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .tasmyaa-press-announcement-empty > svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .tasmyaa-press-announcement-empty > p {
+    font-size: 14px;
+  }
+  .tasmyaa-press-contact {
+    padding: 28px 24px;
+  }
+  .tasmyaa-press-contact h2 {
+    font-size: 18px;
+  }
+  .tasmyaa-press-contact-empty p {
+    font-size: 13px;
+  }
+  .tasmyaa-press-container {
+    width: calc(100% - 48px);
+  }
+  .tasmyaa-press-resources-grid {
+    gap: 25px;
+  }
+  .tasmyaa-press-resource > p {
+    font-size: 13px;
+    min-height: 60px;
+  }
+  .tasmyaa-press-resource h3 {
+    font-size: 17px;
+  }
+  .tasmyaa-press-resource-actions {
+    margin-top: 16px;
+  }
+  .tasmyaa-press-action {
+    padding: 10px 14px;
+    font-size: 11px;
+  }
+  .tasmyaa-press-page {
+    padding-top: 28px;
+  }
+  .tasmyaa-press-page h2 {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .tasmyaa-press-page {
+    padding-top: 22px;
+  }
+  .tasmyaa-press-focus {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .tasmyaa-press-feature {
+    padding: 26px 20px 30px;
+  }
+  .tasmyaa-press-page h2 {
+    font-size: 21px;
+    margin-bottom: 24px;
+  }
+  .tasmyaa-press-featured-image > div {
+    aspect-ratio: 1.6;
+  }
+  .tasmyaa-press-featured-image figcaption {
+    font-size: 10px;
+  }
+  .tasmyaa-press-feature-grid {
+    gap: 27px;
+  }
+  .tasmyaa-press-announcements h3 {
+    font-size: 18px;
+  }
+  .tasmyaa-press-announcement-empty > p {
+    font-size: 14px;
+    max-width: none;
+  }
+  .tasmyaa-press-contact {
+    padding: 30px 24px 32px;
+  }
+  .tasmyaa-press-contact h2 {
+    font-size: 20px;
+    margin-bottom: 23px;
+  }
+  .tasmyaa-press-contact-empty p {
+    font-size: 14px;
+    max-width: 330px;
+    margin: 0 auto;
+  }
+  .tasmyaa-press-contact-empty h3 {
+    font-size: 16px;
+  }
+  .tasmyaa-press-contact-icon {
+    width: 58px;
+    height: 58px;
+  }
+  .tasmyaa-press-contact-link {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  .tasmyaa-press-resources {
+    margin-top: 26px;
+    padding: 30px 0 38px;
+  }
+  .tasmyaa-press-container {
+    width: calc(100% - 40px);
+  }
+  .tasmyaa-press-resources-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 38px;
+  }
+  .tasmyaa-press-resource-image {
+    aspect-ratio: 1.55;
+  }
+  .tasmyaa-press-resource h3 {
+    font-size: 20px;
+    margin-top: 19px;
+  }
+  .tasmyaa-press-resource > p {
+    font-size: 14px;
+    min-height: 0;
+    margin-top: 12px;
+  }
+  .tasmyaa-press-coming-soon {
+    font-size: 12px;
+  }
+  .tasmyaa-press-action {
+    font-size: 12px;
+    padding: 12px 20px;
+  }
+  .tasmyaa-press-resources h2 {
+    margin-bottom: 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tasmyaa-press-action {
+    transition: none;
+  }
+}
