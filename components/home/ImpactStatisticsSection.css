@@ -1,0 +1,129 @@
+.tasmyaa-impact-section {
+  width: 100%;
+  min-height: 220px;
+  padding: 38px 0 44px;
+  background-color: #04131e;
+  background-image:
+    linear-gradient(rgb(0 8 18 / 0.4), rgb(0 5 15 / 0.5)),
+    url("/images/impact-earth.png");
+  background-size: cover;
+  background-position: center right;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.tasmyaa-impact-content {
+  width: 77.4%;
+  max-width: 1470px;
+  margin: 0 auto;
+}
+.tasmyaa-impact-section h2 {
+  font-size: clamp(15px, 1.05vw, 20px);
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0 0 40px;
+}
+.tasmyaa-impact-statistics {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 35px;
+}
+.tasmyaa-impact-statistic {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+}
+.tasmyaa-impact-statistic svg {
+  width: 44px;
+  height: 44px;
+  display: block;
+  flex-shrink: 0;
+}
+.tasmyaa-impact-statistic strong {
+  font-size: clamp(27px, 1.7vw, 33px);
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.tasmyaa-impact-statistic p {
+  font-size: clamp(12px, 0.88vw, 17px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 4px 0 0;
+  max-width: 170px;
+}
+@media (min-width: 1600px) {
+  .tasmyaa-impact-section {
+    min-height: 274px;
+    padding: 48px 0 65px;
+  }
+  .tasmyaa-impact-section h2 {
+    margin-bottom: 44px;
+  }
+  .tasmyaa-impact-statistic svg {
+    width: 52px;
+    height: 52px;
+  }
+}
+@media (max-width: 900px) {
+  .tasmyaa-impact-content {
+    width: calc(100% - 48px);
+  }
+  .tasmyaa-impact-section {
+    padding: 32px 0 36px;
+  }
+  .tasmyaa-impact-section h2 {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+  .tasmyaa-impact-statistics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 45px;
+    padding: 0 45px;
+  }
+  .tasmyaa-impact-statistic {
+    gap: 18px;
+  }
+  .tasmyaa-impact-statistic strong {
+    font-size: 29px;
+  }
+  .tasmyaa-impact-statistic p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 600px) {
+  .tasmyaa-impact-content {
+    width: calc(100% - 32px);
+  }
+  .tasmyaa-impact-section {
+    padding: 30px 0 36px;
+  }
+  .tasmyaa-impact-section h2 {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  .tasmyaa-impact-statistics {
+    gap: 28px 18px;
+    padding: 0 2px;
+  }
+  .tasmyaa-impact-statistic {
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .tasmyaa-impact-statistic svg {
+    width: 30px;
+    height: 34px;
+  }
+  .tasmyaa-impact-statistic strong {
+    font-size: 25px;
+  }
+  .tasmyaa-impact-statistic p {
+    font-size: 11px;
+    max-width: 115px;
+  }
+}
