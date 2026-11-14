@@ -1,0 +1,327 @@
+.tasmyaa-footer {
+  --footer-accent: #00a4d7;
+  background: #000;
+  color: #c5c5c5;
+  margin-top: 36px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(11px, 0.73vw, 14px);
+  line-height: 1.5;
+}
+.tasmyaa-footer * {
+  box-sizing: border-box;
+}
+.tasmyaa-footer-container {
+  width: 77.4%;
+  max-width: 1470px;
+  margin: 0 auto;
+}
+.tasmyaa-footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.7fr) minmax(
+      0,
+      1.1fr
+    ) minmax(0, 1.5fr);
+  gap: 40px;
+  padding: 28px 0 22px;
+  min-height: 280px;
+}
+.tasmyaa-footer h2 {
+  font-size: clamp(12px, 0.8vw, 15px);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 18px;
+  color: #d3d3d3;
+}
+.tasmyaa-footer a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 180ms;
+}
+.tasmyaa-footer a:hover {
+  color: var(--footer-accent);
+}
+.tasmyaa-footer :is(a, button, input, select):focus-visible {
+  outline: 2px solid var(--footer-accent);
+  outline-offset: 4px;
+}
+.tasmyaa-footer .lucide {
+  display: block;
+  flex-shrink: 0;
+  stroke-width: 2;
+}
+.tasmyaa-footer-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  color: #e2e2e2;
+  line-height: 1.3;
+}
+.tasmyaa-footer-navigation [aria-disabled="true"] {
+  color: #c7c7c7;
+}
+.tasmyaa-footer-contact {
+  min-width: 0;
+}
+.tasmyaa-footer-contact address {
+  font-style: normal;
+}
+.tasmyaa-footer-contact p {
+  margin: 0 0 8px;
+  overflow-wrap: anywhere;
+}
+.tasmyaa-footer-placeholder-note {
+  display: block;
+  font-size: 10px;
+  color: #8c8c8c;
+}
+.tasmyaa-footer-address-line {
+  display: block;
+}
+.tasmyaa-footer-contact-lines {
+  margin-top: 18px;
+}
+.tasmyaa-footer-contact-lines p {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.tasmyaa-footer-map {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  color: var(--footer-accent);
+  margin-top: 15px;
+}
+.tasmyaa-footer-newsletter {
+  min-width: 0;
+}
+.tasmyaa-footer-newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin: 0;
+}
+.tasmyaa-footer-newsletter-form input,
+.tasmyaa-footer-newsletter-form select {
+  font: inherit;
+  color: #e1e1e1;
+  background: #000;
+  width: 100%;
+  min-width: 0;
+  height: 28px;
+  border: 1px solid #777;
+  border-radius: 0;
+  padding: 5px 10px;
+}
+.tasmyaa-footer-newsletter-form input::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+.tasmyaa-footer-select {
+  position: relative;
+}
+.tasmyaa-footer-select select {
+  appearance: none;
+  padding-right: 30px;
+}
+.tasmyaa-footer-select > svg {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+}
+.tasmyaa-footer-newsletter-form select:has(option[value=""]:checked) {
+  color: #999;
+}
+.tasmyaa-footer-newsletter-form button {
+  align-self: flex-start;
+  font: inherit;
+  font-size: 10px;
+  line-height: 1.2;
+  color: var(--footer-accent);
+  border: 1px solid var(--footer-accent);
+  border-radius: 0;
+  padding: 7px 11px;
+  background: #000;
+  cursor: default;
+  transition: background 180ms;
+}
+.tasmyaa-footer-newsletter-form button:hover {
+  background: #00212b;
+}
+.tasmyaa-footer-newsletter-form > p {
+  font-size: 9px;
+  color: #999;
+  margin: -3px 0 0;
+}
+.tasmyaa-footer-social {
+  margin-top: 28px;
+}
+.tasmyaa-footer-social h2 {
+  margin-bottom: 12px;
+}
+.tasmyaa-footer-social ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+}
+.tasmyaa-footer-social-label {
+  display: flex;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 700;
+}
+.tasmyaa-footer-facebook {
+  background: #3e65ad;
+  font-size: 17px;
+}
+.tasmyaa-footer-x {
+  background: #2d2d2d;
+  font-size: 13px;
+}
+.tasmyaa-footer-linkedin {
+  background: #007fa8;
+}
+.tasmyaa-footer-youtube {
+  background: #e11d20;
+  font-size: 8px;
+}
+.tasmyaa-footer-instagram {
+  background: linear-gradient(45deg, #e17c41, #b32c9c, #654acb);
+  font-size: 8px;
+}
+.tasmyaa-footer-copyright {
+  background: #1b1b1b;
+  border-top: 1px solid #272727;
+  padding: 10px 0;
+  font-size: clamp(10px, 0.66vw, 12px);
+  color: #aaa;
+}
+.tasmyaa-footer-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (min-width: 1600px) {
+  .tasmyaa-footer-grid {
+    gap: 50px;
+    min-height: 326px;
+    padding: 34px 0 24px;
+  }
+  .tasmyaa-footer-newsletter-form input,
+  .tasmyaa-footer-newsletter-form select {
+    height: 34px;
+  }
+  .tasmyaa-footer-social {
+    margin-top: 34px;
+  }
+}
+@media (max-width: 900px) {
+  .tasmyaa-footer-container {
+    width: calc(100% - 48px);
+  }
+  .tasmyaa-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 50px;
+    padding: 30px 0;
+  }
+  .tasmyaa-footer {
+    font-size: 12px;
+    margin-top: 28px;
+  }
+  .tasmyaa-footer h2 {
+    font-size: 12px;
+  }
+  .tasmyaa-footer-navigation {
+    gap: 9px;
+  }
+  .tasmyaa-footer-newsletter-form input,
+  .tasmyaa-footer-newsletter-form select {
+    height: 34px;
+  }
+  .tasmyaa-footer-newsletter-form button {
+    font-size: 11px;
+  }
+}
+@media (max-width: 600px) {
+  .tasmyaa-footer-container {
+    width: calc(100% - 32px);
+  }
+  .tasmyaa-footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    padding: 28px 0;
+  }
+  .tasmyaa-footer {
+    font-size: 13px;
+    margin-top: 26px;
+  }
+  .tasmyaa-footer h2 {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  .tasmyaa-footer-navigation {
+    gap: 10px;
+  }
+  .tasmyaa-footer-placeholder-note {
+    font-size: 11px;
+  }
+  .tasmyaa-footer-contact-lines {
+    margin-top: 20px;
+  }
+  .tasmyaa-footer-contact-lines p {
+    gap: 7px;
+  }
+  .tasmyaa-footer-map {
+    margin-top: 18px;
+  }
+  .tasmyaa-footer-newsletter-form input,
+  .tasmyaa-footer-newsletter-form select {
+    height: 40px;
+    font-size: 13px;
+  }
+  .tasmyaa-footer-newsletter-form button {
+    min-height: 34px;
+    padding: 8px 13px;
+  }
+  .tasmyaa-footer-newsletter-form > p {
+    font-size: 10px;
+  }
+  .tasmyaa-footer-social {
+    margin-top: 28px;
+  }
+  .tasmyaa-footer-social-label {
+    width: 25px;
+    height: 25px;
+  }
+  .tasmyaa-footer-copyright {
+    font-size: 10px;
+    padding: 13px 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tasmyaa-footer a,
+  .tasmyaa-footer-newsletter-form button {
+    transition: none;
+  }
+}
