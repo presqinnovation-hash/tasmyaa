@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Menu, Search, Sprout } from "lucide-react";
 import ResearchMegaMenu from "./ResearchMegaMenu";
 import "./Header.css";
@@ -16,11 +17,17 @@ function NavigationItems() {
   return (
     <>
       <ResearchMegaMenu />
-      {navigation.map((label) => (
-        <button type="button" aria-disabled="true" key={label}>
-          {label}
-        </button>
-      ))}
+      {navigation.map((label) =>
+        label === "Contact" ? (
+          <Link href="/contact" key={label}>
+            Contact
+          </Link>
+        ) : (
+          <button type="button" aria-disabled="true" key={label}>
+            {label}
+          </button>
+        ),
+      )}
       <button
         type="button"
         aria-disabled="true"

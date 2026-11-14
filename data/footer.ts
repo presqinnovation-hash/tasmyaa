@@ -22,6 +22,7 @@ export const footerNavigation: readonly FooterLinkGroup[] = [
       { label: "Work with Us" },
       { label: "Donate" },
       { label: "FAQs" },
+      { label: "Contact Us", href: "/contact" },
     ],
   },
 ];
