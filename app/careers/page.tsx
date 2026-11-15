@@ -6,6 +6,7 @@ import CareersVideoSection from "@/components/careers/CareersVideoSection";
 import OurApproachSection from "@/components/careers/OurApproachSection";
 import OpenPositionsSection from "@/components/careers/OpenPositionsSection";
 import LifeAtTasmyaaSection from "@/components/careers/LifeAtTasmyaaSection";
+import WhatWeBelieveSection from "@/components/careers/WhatWeBelieveSection";
 import "./careers.css";
 
 export const metadata: Metadata = {
@@ -27,6 +28,7 @@ export default function CareersPage() {
         <OurApproachSection />
         <OpenPositionsSection />
         <LifeAtTasmyaaSection />
+        <WhatWeBelieveSection />
       </main>
       <Footer />
     </>
