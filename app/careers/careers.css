@@ -1,0 +1,708 @@
+.tasmyaa-careers-page {
+  --careers-blue: #009bd1;
+  color: #111;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.tasmyaa-careers-container {
+  width: 77.4%;
+  max-width: 1470px;
+  margin-inline: auto;
+}
+.tasmyaa-careers-page section h2 {
+  font-size: clamp(20px, 1.26vw, 24px);
+  line-height: 1.3;
+  font-weight: 400;
+  margin: 0 0 22px;
+}
+.tasmyaa-careers-page :is(a, button, select):focus-visible {
+  outline: 2px solid var(--careers-blue);
+  outline-offset: 4px;
+}
+.tasmyaa-careers-carousel {
+  --careers-photo-height: clamp(340px, 26.5vw, 510px);
+  --careers-caption-height: 112px;
+  position: relative;
+  height: calc(var(--careers-photo-height) + var(--careers-caption-height));
+  background: #f4efe6;
+  color: #fff;
+  overflow: hidden;
+  isolation: isolate;
+  touch-action: pan-y;
+}
+.tasmyaa-careers-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 600ms ease;
+  pointer-events: none;
+  display: grid;
+  grid-template-rows: var(--careers-photo-height) var(--careers-caption-height);
+}
+.tasmyaa-careers-slide-active {
+  opacity: 1;
+  z-index: 1;
+}
+.tasmyaa-careers-slide-photo {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+.tasmyaa-careers-slide-photo img {
+  object-fit: cover;
+}
+.tasmyaa-careers-carousel-hero .tasmyaa-careers-slide-photo img {
+  filter: grayscale(1);
+}
+.tasmyaa-careers-slide-caption {
+  background: #333;
+  text-align: center;
+  padding: 23px 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tasmyaa-careers-page .tasmyaa-careers-slide-caption h2 {
+  color: #fff;
+  font-size: clamp(23px, 1.6vw, 30px);
+  margin: 0 0 9px;
+  font-weight: 400;
+}
+.tasmyaa-careers-slide-caption > p {
+  font-size: clamp(13px, 0.94vw, 18px);
+  line-height: 1.45;
+  margin: 0;
+}
+.tasmyaa-careers-carousel-arrow {
+  position: absolute;
+  top: calc(var(--careers-photo-height) / 2);
+  transform: translateY(-50%);
+  z-index: 3;
+  border: 0;
+  background: #0004;
+  color: #fff;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.tasmyaa-careers-carousel-arrow:hover {
+  background: #0008;
+}
+.tasmyaa-careers-carousel-previous {
+  left: 14px;
+}
+.tasmyaa-careers-carousel-next {
+  right: 14px;
+}
+.tasmyaa-careers-carousel-dots {
+  position: absolute;
+  bottom: calc(var(--careers-caption-height) + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 4px;
+}
+.tasmyaa-careers-carousel-dots button {
+  width: 25px;
+  height: 25px;
+  border: 0;
+  padding: 8px;
+  background: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.tasmyaa-careers-carousel-dots span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff75;
+  border: 1px solid #fff;
+}
+.tasmyaa-careers-carousel-dots [aria-current="true"] span {
+  background: #fff;
+}
+.tasmyaa-careers-carousel-rotation {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: #0008;
+  padding: 6px 8px;
+  font-size: 11px;
+  border-radius: 3px;
+}
+.tasmyaa-careers-carousel-rotation button {
+  display: grid;
+  place-items: center;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #ffffff80;
+  cursor: pointer;
+  width: 27px;
+  height: 27px;
+}
+.tasmyaa-careers-hero-note {
+  font-size: 10px;
+  line-height: 1.5;
+  text-align: center;
+  color: #666;
+  margin: 0;
+  padding: 13px 24px 0;
+}
+.tasmyaa-careers-video-section {
+  margin-top: 32px;
+  background: #ebebeb;
+  padding: 40px 0 32px;
+  text-align: center;
+}
+.tasmyaa-careers-video-section .tasmyaa-careers-container > p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0 auto 28px;
+  max-width: 900px;
+}
+.tasmyaa-careers-video {
+  aspect-ratio: 16/9;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #222;
+}
+.tasmyaa-careers-video iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+.tasmyaa-careers-video-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #007caa;
+  font-size: 11px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+.tasmyaa-careers-video-link:hover {
+  text-decoration: underline;
+}
+.tasmyaa-careers-approach-section {
+  padding: 40px 0 48px;
+}
+.tasmyaa-careers-approach-note {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #666;
+  margin: -7px 0 30px;
+}
+.tasmyaa-careers-approach-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 38px 24px;
+  margin: 0;
+  padding: 0;
+}
+.tasmyaa-careers-approach-step {
+  grid-column: span 2;
+  text-align: center;
+  min-width: 0;
+}
+.tasmyaa-careers-approach-step:nth-child(5) {
+  grid-column: 2 / span 2;
+}
+.tasmyaa-careers-approach-step:nth-child(6) {
+  grid-column: 4 / span 2;
+}
+.tasmyaa-careers-approach-step:nth-child(7) {
+  grid-column: 6 / span 2;
+}
+.tasmyaa-careers-step-icon {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 10px 20px;
+  color: #626262;
+  min-height: 118px;
+  align-items: center;
+}
+.tasmyaa-careers-step-icon > svg {
+  width: 86px;
+  height: 86px;
+}
+.tasmyaa-careers-step-icon > span {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+  border: 1px solid #666;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  color: #333;
+}
+.tasmyaa-careers-approach-step h3 {
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
+  margin: 16px 0 13px;
+}
+.tasmyaa-careers-approach-step > p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0 auto;
+  max-width: 280px;
+}
+.tasmyaa-careers-positions-section {
+  background: #ebebeb;
+  padding: 40px 0 48px;
+}
+.tasmyaa-careers-positions-intro {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 28px;
+  max-width: 1080px;
+}
+.tasmyaa-careers-filters {
+  display: flex;
+  gap: 14px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 38px;
+}
+.tasmyaa-careers-filters label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+.tasmyaa-careers-select {
+  position: relative;
+}
+.tasmyaa-careers-select select {
+  appearance: none;
+  min-width: 210px;
+  width: 100%;
+  height: 37px;
+  border: 1px solid #8c8c8c;
+  background: #fff;
+  border-radius: 3px;
+  font: inherit;
+  font-size: 13px;
+  padding: 8px 32px 8px 15px;
+  color: #555;
+}
+.tasmyaa-careers-select > svg {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #777;
+}
+.tasmyaa-careers-apply {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  height: 38px;
+  padding: 9px 20px;
+  border: 1px solid var(--careers-blue);
+  background: var(--careers-blue);
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.tasmyaa-careers-apply:hover {
+  background: #007da9;
+}
+.tasmyaa-careers-reset {
+  font: inherit;
+  font-size: 12px;
+  color: #555;
+  height: 38px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 8px 5px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.tasmyaa-careers-positions-empty {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  background: #fff;
+  padding: 30px;
+  color: #535353;
+  min-height: 110px;
+}
+.tasmyaa-careers-positions-empty svg {
+  flex-shrink: 0;
+  color: #8a8a8a;
+}
+.tasmyaa-careers-positions-empty p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+.tasmyaa-careers-positions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+.tasmyaa-careers-position-card {
+  padding: 25px;
+  background: #fff;
+  min-width: 0;
+}
+.tasmyaa-careers-position-card h3 {
+  font-size: 16px;
+  color: #0086ba;
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0 0 12px;
+}
+.tasmyaa-careers-position-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 9px 0;
+}
+.tasmyaa-careers-position-location {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: #666;
+}
+.tasmyaa-careers-position-card a {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  color: #0086ba;
+  font-size: 13px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+.tasmyaa-careers-position-card a:hover {
+  text-decoration: underline;
+}
+.tasmyaa-careers-results {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 15px;
+}
+.tasmyaa-careers-life-section {
+  padding-top: 35px;
+}
+.tasmyaa-careers-life-note {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #666;
+  margin: -8px 0 23px;
+  max-width: 850px;
+}
+.tasmyaa-careers-carousel-life {
+  --careers-photo-height: clamp(350px, 36vw, 650px);
+  --careers-caption-height: 0px;
+  height: var(--careers-photo-height);
+  background: #1b242a;
+}
+.tasmyaa-careers-carousel-life .tasmyaa-careers-slide {
+  display: block;
+}
+.tasmyaa-careers-carousel-life .tasmyaa-careers-slide-photo {
+  position: absolute;
+  inset: 0;
+}
+.tasmyaa-careers-carousel-life .tasmyaa-careers-slide-caption {
+  position: absolute;
+  inset: auto 0 0;
+  background: linear-gradient(transparent, #000c);
+  padding: 55px 75px 45px;
+  text-align: left;
+  align-items: flex-start;
+}
+.tasmyaa-careers-page .tasmyaa-careers-carousel-life h2 {
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+.tasmyaa-careers-carousel-life .tasmyaa-careers-slide-caption > p {
+  font-size: 11px;
+  line-height: 1.5;
+  max-width: 750px;
+}
+.tasmyaa-careers-carousel-life .tasmyaa-careers-carousel-dots {
+  bottom: 7px;
+}
+.tasmyaa-careers-skip {
+  position: fixed;
+  z-index: 100;
+  left: 8px;
+  top: 8px;
+  background: #fff;
+  color: #111;
+  padding: 12px;
+  transform: translateY(-180%);
+}
+.tasmyaa-careers-skip:focus {
+  transform: none;
+  outline: 2px solid #009bd1;
+}
+.tasmyaa-careers-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (min-width: 1700px) {
+  .tasmyaa-careers-video-section {
+    padding-block: 48px 35px;
+  }
+  .tasmyaa-careers-approach-section,
+  .tasmyaa-careers-positions-section {
+    padding-block: 45px 55px;
+  }
+  .tasmyaa-careers-step-icon > svg {
+    width: 105px;
+    height: 105px;
+  }
+  .tasmyaa-careers-step-icon {
+    min-height: 140px;
+  }
+  .tasmyaa-careers-approach-step > p {
+    font-size: 16px;
+    max-width: 320px;
+  }
+  .tasmyaa-careers-approach-step h3 {
+    font-size: 18px;
+  }
+  .tasmyaa-careers-approach-grid {
+    row-gap: 45px;
+  }
+}
+@media (max-width: 1000px) {
+  .tasmyaa-careers-container {
+    width: calc(100% - 48px);
+  }
+  .tasmyaa-careers-approach-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px 35px;
+  }
+  .tasmyaa-careers-approach-step:nth-child(n) {
+    grid-column: auto;
+  }
+  .tasmyaa-careers-approach-step:last-child {
+    grid-column: 1/-1;
+    max-width: 330px;
+    justify-self: center;
+  }
+  .tasmyaa-careers-step-icon > span {
+    right: 22px;
+  }
+  .tasmyaa-careers-positions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .tasmyaa-careers-positions-intro {
+    font-size: 14px;
+  }
+  .tasmyaa-careers-slide-caption {
+    padding-inline: 55px;
+  }
+  .tasmyaa-careers-carousel {
+    --careers-photo-height: 340px;
+  }
+  .tasmyaa-careers-carousel-life {
+    --careers-photo-height: 430px;
+  }
+  .tasmyaa-careers-video-section .tasmyaa-careers-container > p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .tasmyaa-careers-container {
+    width: calc(100% - 32px);
+  }
+  .tasmyaa-careers-carousel {
+    --careers-photo-height: 280px;
+    --careers-caption-height: 140px;
+  }
+  .tasmyaa-careers-carousel-hero .tasmyaa-careers-slide-caption {
+    padding: 20px 24px 25px;
+  }
+  .tasmyaa-careers-page .tasmyaa-careers-slide-caption h2 {
+    font-size: 23px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+  .tasmyaa-careers-slide-caption > p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .tasmyaa-careers-carousel-arrow {
+    width: 35px;
+    height: 38px;
+  }
+  .tasmyaa-careers-carousel-previous {
+    left: 6px;
+  }
+  .tasmyaa-careers-carousel-next {
+    right: 6px;
+  }
+  .tasmyaa-careers-carousel-rotation {
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+  }
+  .tasmyaa-careers-carousel-rotation button {
+    width: 25px;
+    height: 25px;
+  }
+  .tasmyaa-careers-hero-note {
+    font-size: 9px;
+    padding-inline: 16px;
+  }
+  .tasmyaa-careers-video-section {
+    margin-top: 25px;
+    padding: 28px 0 25px;
+  }
+  .tasmyaa-careers-page section h2 {
+    font-size: 21px;
+  }
+  .tasmyaa-careers-video-section .tasmyaa-careers-container > p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 23px;
+  }
+  .tasmyaa-careers-video-link {
+    font-size: 10px;
+  }
+  .tasmyaa-careers-approach-section {
+    padding: 30px 0 38px;
+  }
+  .tasmyaa-careers-approach-note {
+    font-size: 11px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .tasmyaa-careers-approach-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+  .tasmyaa-careers-approach-step:last-child {
+    grid-column: auto;
+    max-width: none;
+    justify-self: stretch;
+  }
+  .tasmyaa-careers-step-icon {
+    min-height: 105px;
+  }
+  .tasmyaa-careers-step-icon > svg {
+    width: 75px;
+    height: 75px;
+  }
+  .tasmyaa-careers-step-icon > span {
+    right: calc(50% - 85px);
+  }
+  .tasmyaa-careers-approach-step h3 {
+    font-size: 17px;
+    margin-top: 10px;
+  }
+  .tasmyaa-careers-approach-step > p {
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 290px;
+  }
+  .tasmyaa-careers-positions-section {
+    padding: 30px 0 35px;
+  }
+  .tasmyaa-careers-positions-intro {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .tasmyaa-careers-filters {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    margin-bottom: 27px;
+  }
+  .tasmyaa-careers-select select {
+    min-width: 0;
+    height: 42px;
+    font-size: 14px;
+  }
+  .tasmyaa-careers-filters label {
+    font-size: 13px;
+  }
+  .tasmyaa-careers-apply {
+    height: 42px;
+    justify-self: start;
+    padding-inline: 25px;
+  }
+  .tasmyaa-careers-reset {
+    justify-self: start;
+    height: 30px;
+  }
+  .tasmyaa-careers-positions-empty {
+    padding: 24px 20px;
+    align-items: flex-start;
+    gap: 13px;
+  }
+  .tasmyaa-careers-positions-empty p {
+    font-size: 14px;
+  }
+  .tasmyaa-careers-positions-empty svg {
+    width: 25px;
+    margin-top: 3px;
+  }
+  .tasmyaa-careers-positions-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .tasmyaa-careers-life-section {
+    padding-top: 28px;
+  }
+  .tasmyaa-careers-life-note {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  .tasmyaa-careers-carousel-life {
+    --careers-photo-height: 340px;
+    --careers-caption-height: 0px;
+  }
+  .tasmyaa-careers-carousel-life .tasmyaa-careers-slide-caption {
+    padding: 50px 24px 43px;
+  }
+  .tasmyaa-careers-page .tasmyaa-careers-carousel-life h2 {
+    font-size: 18px;
+    line-height: 1.35;
+    max-width: 270px;
+  }
+  .tasmyaa-careers-carousel-life .tasmyaa-careers-slide-caption > p {
+    font-size: 10px;
+    line-height: 1.5;
+    max-width: 280px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tasmyaa-careers-slide,
+  .tasmyaa-careers-carousel-arrow {
+    transition: none;
+  }
+}
