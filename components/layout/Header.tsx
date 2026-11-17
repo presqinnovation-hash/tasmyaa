@@ -20,14 +20,17 @@ function NavigationItems() {
       {navigation.map((label) =>
         label === "Contact" ||
         label === "Press Releases" ||
-        label === "Work with Us" ? (
+        label === "Work with Us" ||
+        label === "Blogs" ? (
           <Link
             href={
               label === "Contact"
                 ? "/contact"
                 : label === "Work with Us"
                   ? "/careers"
-                  : "/press-releases"
+                  : label === "Blogs"
+                    ? "/blog"
+                    : "/press-releases"
             }
             key={label}
           >
